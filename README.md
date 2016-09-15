@@ -23,6 +23,7 @@ Aria2GUI
 - 导出插件下载：[百度网盘](https://github.com/acgotaku/BaiduExporter)，[115网盘](https://github.com/acgotaku/115)，[迅雷离线](https://github.com/binux/ThunderLixianExporter)
 - 在设置里面可以编辑aria2.conf配置文件，保存并重启app即可
 - 如果需要修改默认下载路径,比如外置硬盘或者其他盘符，直接在网页插件里面设置绝对路径即可
+
 ## Download:
 
   [Releases](https://github.com/yangshun1029/aria2gui/releases)
