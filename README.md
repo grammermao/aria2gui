@@ -22,7 +22,7 @@ Aria2GUI
 - 使用Chrome浏览器可配合[YAAW-for-Chrome](https://github.com/acgotaku/YAAW-for-Chrome)插件接管浏览器的所有下载到aria2
 - 导出插件下载：[百度网盘](https://github.com/acgotaku/BaiduExporter)，[115网盘](https://github.com/acgotaku/115)，[迅雷离线](https://github.com/binux/ThunderLixianExporter)
 - 在设置里面可以编辑aria2.conf配置文件，保存并重启app即可
-- 如果需要修改默认下载路径,比如外置硬盘或者其他盘符，直接在网页插件里面设置绝对路径即可
+- 如果需要修改默认下载路径，比如外置硬盘或者其他盘符，直接在网页插件里面设置绝对路径即可
 
 ## Download:
 
