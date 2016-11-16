@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01770F461D8A6C1500841B71 /* aria2.conf in Resources */ = {isa = PBXBuildFile; fileRef = 01770F451D8A6C1500841B71 /* aria2.conf */; };
-		01B445621D7C79E3006CF337 /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01B445611D7C79E3006CF337 /* aria2gui */; };
+		01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */ = {isa = PBXBuildFile; fileRef = 01BC003A1DDCB9D200DB1BB0 /* aria2.session */; };
+		01BC003D1DDCB9E500DB1BB0 /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01BC003C1DDCB9E500DB1BB0 /* aria2gui */; };
 		01CB21FA1D69D0C4001465AD /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */; };
 		01CB21FB1D69D0C4001465AD /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB21F21D69D0C4001465AD /* MASPreferencesWindowController.m */; };
 		01CB22071D69D0CD001465AD /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB22011D69D0CD001465AD /* AdvancedPreferencesView.xib */; };
@@ -51,7 +52,8 @@
 
 /* Begin PBXFileReference section */
 		01770F451D8A6C1500841B71 /* aria2.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.conf; sourceTree = "<group>"; };
-		01B445611D7C79E3006CF337 /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
+		01BC003A1DDCB9D200DB1BB0 /* aria2.session */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.session; sourceTree = "<group>"; };
+		01BC003C1DDCB9E500DB1BB0 /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
 		01CB21EF1D69D0C4001465AD /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
 		01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
 		01CB21F11D69D0C4001465AD /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
@@ -208,8 +210,9 @@
 		22B1CEF31937734B00D2C294 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
+				01BC003A1DDCB9D200DB1BB0 /* aria2.session */,
 				01770F451D8A6C1500841B71 /* aria2.conf */,
-				01B445611D7C79E3006CF337 /* aria2gui */,
+				01BC003C1DDCB9E500DB1BB0 /* aria2gui */,
 				22B1CEF41937734B00D2C294 /* AppDelegate.h */,
 				22B1CEF51937734B00D2C294 /* AppDelegate.m */,
 				22B1CEFA1937734B00D2C294 /* Categories */,
@@ -361,14 +364,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B445621D7C79E3006CF337 /* aria2gui in Resources */,
 				2237E6EF192BAF85001E1393 /* public in Resources */,
 				01CB22071D69D0CD001465AD /* AdvancedPreferencesView.xib in Resources */,
+				01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */,
 				22B1CF401937734B00D2C294 /* Credits.rtf in Resources */,
 				22B1CF421937734B00D2C294 /* Images.xcassets in Resources */,
 				01CB21FA1D69D0C4001465AD /* MASPreferencesWindow.xib in Resources */,
 				22B1CF2D1937734B00D2C294 /* MainWindow.xib in Resources */,
 				22B1CF2C1937734B00D2C294 /* MainMenu.xib in Resources */,
+				01BC003D1DDCB9E500DB1BB0 /* aria2gui in Resources */,
 				01CB22091D69D0CD001465AD /* GeneralPreferencesView.xib in Resources */,
 				01770F461D8A6C1500841B71 /* aria2.conf in Resources */,
 				22B1CF411937734B00D2C294 /* InfoPlist.strings in Resources */,

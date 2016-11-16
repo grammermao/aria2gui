@@ -21,8 +21,8 @@
         "position": "center",
         "min_width": 840,
         "min_height": 660,
-        "opaque": 1,
-        "alpha": 1
+        "opaque": 0,
+        "alpha": 0
     }
   
 }

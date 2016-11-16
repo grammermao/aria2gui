@@ -53,14 +53,11 @@
     [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:NULL];
     NSString *startAriaPath = [path stringByAppendingPathComponent:@"Aria2GUI.sh"];
     //~/Library/Application Support/com.Aria2GUI/sh/
-    
     [fileManager createFileAtPath:startAriaPath contents:nil attributes:nil];
     
     NSString *dir = [@"~/Downloads/" stringByExpandingTildeInPath];
 
-    
-    NSString *shCommand = [NSString stringWithFormat:@"touch \"/Users/Shared/aria2.session\"\n%@ --dir=%@ --conf-path=%@ -D",[[NSBundle mainBundle] pathForResource:@"aria2gui" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"]];
-                               
+    NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --input-file=%@ --save-session=%@ -D",[[NSBundle mainBundle] pathForResource:@"aria2gui" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"]];
                                
     [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
         
