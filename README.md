@@ -2,7 +2,7 @@
 Aria2GUI
 ===========
 
-![UI](http://i.imgur.com/lgVkiAw.png)
+![UI](http://i.imgur.com/xuDkVLc.png)
 
 ## Features:
 
