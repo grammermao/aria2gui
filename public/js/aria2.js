@@ -714,7 +714,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           if (result.downloadSpeed > 0)
               MacGap.Dock.addBadge(YAAW.tpl.view.format_size_0()(result.downloadSpeed));
           else
-              MacGap.Dock.removeBadge;
+              MacGap.Dock.removeBadge();
         }
       );
     },

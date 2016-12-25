@@ -15,7 +15,7 @@
                 "File" : "File"
                  },
     "window" : {
-        "title" : "Aria2GUI",
+        "title" : "",
         "width" : 900,
         "height" : 600,
         "position": "center",
