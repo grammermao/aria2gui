@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010CE6C51E0CF6CB0076F60C /* Proxy.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6C31E0CF6CB0076F60C /* Proxy.png */; };
+		010CE6C61E0CF6CB0076F60C /* Proxy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */; };
+		010CE6D21E0D32D40076F60C /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6D41E0D32D40076F60C /* Preferences.xib */; };
+		011A564A1E0EBBB7005BEAA6 /* public_zh in Resources */ = {isa = PBXBuildFile; fileRef = 011A56491E0EBBB7005BEAA6 /* public_zh */; };
+		013C1D1B1E0EB025001EA2E5 /* public in Resources */ = {isa = PBXBuildFile; fileRef = 013C1D1A1E0EB025001EA2E5 /* public */; };
+		016F30331E097AA8001132DF /* startAria2.sh in Resources */ = {isa = PBXBuildFile; fileRef = 016F30311E097AA8001132DF /* startAria2.sh */; };
+		016F30341E097AA8001132DF /* restartAria2.sh in Resources */ = {isa = PBXBuildFile; fileRef = 016F30321E097AA8001132DF /* restartAria2.sh */; };
+		0170270D1DFED3DB0081835F /* AppPrefsWindowsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017027081DFED3DB0081835F /* AppPrefsWindowsController.m */; };
+		0170270E1DFED3DB0081835F /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */; };
 		01770F461D8A6C1500841B71 /* aria2.conf in Resources */ = {isa = PBXBuildFile; fileRef = 01770F451D8A6C1500841B71 /* aria2.conf */; };
+		01B5354C1E0A1A2100C05F9A /* Bandwidth.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B535481E0A1A2100C05F9A /* Bandwidth.png */; };
+		01B5354D1E0A1A2100C05F9A /* Bandwidth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */; };
+		01B5354E1E0A1A2100C05F9A /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B5354A1E0A1A2100C05F9A /* General.png */; };
+		01B5354F1E0A1A2100C05F9A /* General@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B5354B1E0A1A2100C05F9A /* General@2x.png */; };
 		01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */ = {isa = PBXBuildFile; fileRef = 01BC003A1DDCB9D200DB1BB0 /* aria2.session */; };
-		01BC003D1DDCB9E500DB1BB0 /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01BC003C1DDCB9E500DB1BB0 /* aria2gui */; };
-		01CB21FA1D69D0C4001465AD /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */; };
-		01CB21FB1D69D0C4001465AD /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB21F21D69D0C4001465AD /* MASPreferencesWindowController.m */; };
-		01CB22071D69D0CD001465AD /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB22011D69D0CD001465AD /* AdvancedPreferencesView.xib */; };
-		01CB22081D69D0CD001465AD /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB22031D69D0CD001465AD /* AdvancedPreferencesViewController.m */; };
-		01CB22091D69D0CD001465AD /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB22041D69D0CD001465AD /* GeneralPreferencesView.xib */; };
-		01CB220A1D69D0CD001465AD /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB22061D69D0CD001465AD /* GeneralPreferencesViewController.m */; };
+		01CC37EB1E0428E900B34A9D /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 01CC37EA1E0428E900B34A9D /* aria2c */; };
 		2237E64A192B0177001E1393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E649192B0177001E1393 /* Cocoa.framework */; };
 		2237E67E192B0186001E1393 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67D192B0186001E1393 /* WebKit.framework */; };
 		2237E680192B018D001E1393 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67F192B018D001E1393 /* JavaScriptCore.framework */; };
-		2237E6EF192BAF85001E1393 /* public in Resources */ = {isa = PBXBuildFile; fileRef = 2237E6EE192BAF85001E1393 /* public */; };
 		226AE65D193AA8FC00B15FB7 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 226AE65C193AA8FC00B15FB7 /* Sound.m */; };
 		22A676E71944B140002F81FB /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A676E61944B140002F81FB /* File.m */; };
 		22B1CF2B1937734B00D2C294 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B1CEF51937734B00D2C294 /* AppDelegate.m */; };
@@ -51,28 +57,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010CE6C31E0CF6CB0076F60C /* Proxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Proxy.png; sourceTree = "<group>"; };
+		010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Proxy@2x.png"; sourceTree = "<group>"; };
+		010CE6CA1E0D2D890076F60C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		010CE6CC1E0D2E610076F60C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainWindow.strings; sourceTree = "<group>"; };
+		010CE6CD1E0D30380076F60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		010CE6CE1E0D323C0076F60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		010CE6CF1E0D323C0076F60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainWindow.strings"; sourceTree = "<group>"; };
+		010CE6D01E0D323C0076F60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "zh-Hans"; path = "zh-Hans.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		010CE6D11E0D323C0076F60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		010CE6D31E0D32D40076F60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		010CE6D61E0D32D60076F60C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Preferences.strings; sourceTree = "<group>"; };
+		010CE6D81E0D32DB0076F60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Preferences.strings"; sourceTree = "<group>"; };
+		010CE6D91E0D45DF0076F60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		011A56491E0EBBB7005BEAA6 /* public_zh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public_zh; sourceTree = "<group>"; };
+		013C1D1A1E0EB025001EA2E5 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		016F30311E097AA8001132DF /* startAria2.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = startAria2.sh; sourceTree = "<group>"; };
+		016F30321E097AA8001132DF /* restartAria2.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = restartAria2.sh; sourceTree = "<group>"; };
+		017027071DFED3DB0081835F /* AppPrefsWindowsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPrefsWindowsController.h; sourceTree = "<group>"; };
+		017027081DFED3DB0081835F /* AppPrefsWindowsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPrefsWindowsController.m; sourceTree = "<group>"; };
+		017027091DFED3DB0081835F /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
+		0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		01770F451D8A6C1500841B71 /* aria2.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.conf; sourceTree = "<group>"; };
+		01B535481E0A1A2100C05F9A /* Bandwidth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bandwidth.png; sourceTree = "<group>"; };
+		01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bandwidth@2x.png"; sourceTree = "<group>"; };
+		01B5354A1E0A1A2100C05F9A /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
+		01B5354B1E0A1A2100C05F9A /* General@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General@2x.png"; sourceTree = "<group>"; };
 		01BC003A1DDCB9D200DB1BB0 /* aria2.session */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.session; sourceTree = "<group>"; };
-		01BC003C1DDCB9E500DB1BB0 /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
-		01CB21EF1D69D0C4001465AD /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
-		01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
-		01CB21F11D69D0C4001465AD /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
-		01CB21F21D69D0C4001465AD /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
-		01CB22011D69D0CD001465AD /* AdvancedPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedPreferencesView.xib; sourceTree = "<group>"; };
-		01CB22021D69D0CD001465AD /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
-		01CB22031D69D0CD001465AD /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
-		01CB22041D69D0CD001465AD /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
-		01CB22051D69D0CD001465AD /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
-		01CB22061D69D0CD001465AD /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		01CC37EA1E0428E900B34A9D /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2c; sourceTree = "<group>"; };
 		2237E646192B0177001E1393 /* Aria2GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2GUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2237E649192B0177001E1393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2237E64C192B0177001E1393 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2237E64D192B0177001E1393 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2237E64E192B0177001E1393 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2237E668192B0177001E1393 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2237E67D192B0186001E1393 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2237E67F192B018D001E1393 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		2237E6EE192BAF85001E1393 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		226AE65B193AA8FC00B15FB7 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		226AE65C193AA8FC00B15FB7 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 		22A676E51944B140002F81FB /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
@@ -143,34 +162,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01CB21EE1D69D0C4001465AD /* MASPreferences */ = {
+		017026ED1DFEC7DB0081835F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				01CB21EF1D69D0C4001465AD /* MASPreferencesViewController.h */,
-				01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */,
-				01CB21F11D69D0C4001465AD /* MASPreferencesWindowController.h */,
-				01CB21F21D69D0C4001465AD /* MASPreferencesWindowController.m */,
+				01B535481E0A1A2100C05F9A /* Bandwidth.png */,
+				01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */,
+				01B5354A1E0A1A2100C05F9A /* General.png */,
+				01B5354B1E0A1A2100C05F9A /* General@2x.png */,
+				010CE6C31E0CF6CB0076F60C /* Proxy.png */,
+				010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */,
 			);
-			path = MASPreferences;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		01CB22001D69D0CD001465AD /* Prefences */ = {
+		017026FC1DFECA590081835F /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				01CB22011D69D0CD001465AD /* AdvancedPreferencesView.xib */,
-				01CB22021D69D0CD001465AD /* AdvancedPreferencesViewController.h */,
-				01CB22031D69D0CD001465AD /* AdvancedPreferencesViewController.m */,
-				01CB22041D69D0CD001465AD /* GeneralPreferencesView.xib */,
-				01CB22051D69D0CD001465AD /* GeneralPreferencesViewController.h */,
-				01CB22061D69D0CD001465AD /* GeneralPreferencesViewController.m */,
+				017027071DFED3DB0081835F /* AppPrefsWindowsController.h */,
+				017027081DFED3DB0081835F /* AppPrefsWindowsController.m */,
+				017027091DFED3DB0081835F /* DBPrefsWindowController.h */,
+				0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */,
+				010CE6D41E0D32D40076F60C /* Preferences.xib */,
 			);
-			path = Prefences;
-			sourceTree = "<group>";
+			name = Preferences;
+			path = MacGap/Preferences;
+			sourceTree = SOURCE_ROOT;
 		};
 		2237E63D192B0177001E1393 = {
 			isa = PBXGroup;
 			children = (
-				2237E6EE192BAF85001E1393 /* public */,
+				013C1D1A1E0EB025001EA2E5 /* public */,
+				011A56491E0EBBB7005BEAA6 /* public_zh */,
 				22B1CEF31937734B00D2C294 /* MacGap */,
 				2237E648192B0177001E1393 /* Frameworks */,
 				2237E647192B0177001E1393 /* Products */,
@@ -191,7 +213,6 @@
 				2237E67F192B018D001E1393 /* JavaScriptCore.framework */,
 				2237E67D192B0186001E1393 /* WebKit.framework */,
 				2237E649192B0177001E1393 /* Cocoa.framework */,
-				2237E668192B0177001E1393 /* XCTest.framework */,
 				2237E64B192B0177001E1393 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -210,9 +231,11 @@
 		22B1CEF31937734B00D2C294 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
+				016F30311E097AA8001132DF /* startAria2.sh */,
+				016F30321E097AA8001132DF /* restartAria2.sh */,
+				01CC37EA1E0428E900B34A9D /* aria2c */,
 				01BC003A1DDCB9D200DB1BB0 /* aria2.session */,
 				01770F451D8A6C1500841B71 /* aria2.conf */,
-				01BC003C1DDCB9E500DB1BB0 /* aria2gui */,
 				22B1CEF41937734B00D2C294 /* AppDelegate.h */,
 				22B1CEF51937734B00D2C294 /* AppDelegate.m */,
 				22B1CEFA1937734B00D2C294 /* Categories */,
@@ -238,8 +261,7 @@
 		22B1CEFF1937734B00D2C294 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				01CB22001D69D0CD001465AD /* Prefences */,
-				01CB21EE1D69D0C4001465AD /* MASPreferences */,
+				017026FC1DFECA590081835F /* Preferences */,
 				22B1CF001937734B00D2C294 /* Commands */,
 				22B1CF1C1937734B00D2C294 /* Utils.h */,
 				22B1CF1D1937734B00D2C294 /* Utils.m */,
@@ -294,6 +316,7 @@
 		22B1CF45193773A400D2C294 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				017026ED1DFEC7DB0081835F /* Resources */,
 				22B1CF231937734B00D2C294 /* Credits.rtf */,
 				22B1CF251937734B00D2C294 /* InfoPlist.strings */,
 				22B1CF271937734B00D2C294 /* Images.xcassets */,
@@ -348,6 +371,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 2237E63D192B0177001E1393;
 			productRefGroup = 2237E647192B0177001E1393 /* Products */;
@@ -364,17 +388,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2237E6EF192BAF85001E1393 /* public in Resources */,
-				01CB22071D69D0CD001465AD /* AdvancedPreferencesView.xib in Resources */,
 				01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */,
+				01B5354E1E0A1A2100C05F9A /* General.png in Resources */,
 				22B1CF401937734B00D2C294 /* Credits.rtf in Resources */,
 				22B1CF421937734B00D2C294 /* Images.xcassets in Resources */,
-				01CB21FA1D69D0C4001465AD /* MASPreferencesWindow.xib in Resources */,
+				016F30341E097AA8001132DF /* restartAria2.sh in Resources */,
+				010CE6C51E0CF6CB0076F60C /* Proxy.png in Resources */,
+				010CE6C61E0CF6CB0076F60C /* Proxy@2x.png in Resources */,
+				01CC37EB1E0428E900B34A9D /* aria2c in Resources */,
+				010CE6D21E0D32D40076F60C /* Preferences.xib in Resources */,
+				016F30331E097AA8001132DF /* startAria2.sh in Resources */,
+				01B5354F1E0A1A2100C05F9A /* General@2x.png in Resources */,
 				22B1CF2D1937734B00D2C294 /* MainWindow.xib in Resources */,
+				01B5354C1E0A1A2100C05F9A /* Bandwidth.png in Resources */,
 				22B1CF2C1937734B00D2C294 /* MainMenu.xib in Resources */,
-				01BC003D1DDCB9E500DB1BB0 /* aria2gui in Resources */,
-				01CB22091D69D0CD001465AD /* GeneralPreferencesView.xib in Resources */,
 				01770F461D8A6C1500841B71 /* aria2.conf in Resources */,
+				011A564A1E0EBBB7005BEAA6 /* public_zh in Resources */,
+				013C1D1B1E0EB025001EA2E5 /* public in Resources */,
+				01B5354D1E0A1A2100C05F9A /* Bandwidth@2x.png in Resources */,
 				22B1CF411937734B00D2C294 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,27 +421,26 @@
 				22B1CF341937734B00D2C294 /* Dock.m in Sources */,
 				22B1CF2E1937734B00D2C294 /* JSON.m in Sources */,
 				22BE36ED193B7F8800D8199F /* Defaults.m in Sources */,
-				01CB21FB1D69D0C4001465AD /* MASPreferencesWindowController.m in Sources */,
 				22B1CF381937734B00D2C294 /* MenuItem.m in Sources */,
 				22B1CF301937734B00D2C294 /* App.m in Sources */,
 				22B1CF371937734B00D2C294 /* Menu.m in Sources */,
 				22A676E71944B140002F81FB /* File.m in Sources */,
-				01CB22081D69D0CD001465AD /* AdvancedPreferencesViewController.m in Sources */,
 				22B1CF3C1937734B00D2C294 /* Window.m in Sources */,
 				22B1CF3F1937734B00D2C294 /* WindowController.m in Sources */,
 				22B1CF3D1937734B00D2C294 /* Utils.m in Sources */,
 				22B1CF3E1937734B00D2C294 /* WebViewDelegate.m in Sources */,
 				22B1CF3A1937734B00D2C294 /* StatusItem.m in Sources */,
+				0170270E1DFED3DB0081835F /* DBPrefsWindowController.m in Sources */,
 				22B1CF311937734B00D2C294 /* Clipboard.m in Sources */,
 				22B1CF2F1937734B00D2C294 /* NSData+Base64.m in Sources */,
 				22B1CF431937734B00D2C294 /* main.m in Sources */,
 				22B1CF321937734B00D2C294 /* Command.m in Sources */,
-				01CB220A1D69D0CD001465AD /* GeneralPreferencesViewController.m in Sources */,
 				226AE65D193AA8FC00B15FB7 /* Sound.m in Sources */,
 				22B1CF331937734B00D2C294 /* Dialog.m in Sources */,
 				22B1CF361937734B00D2C294 /* Fonts.m in Sources */,
 				22B1CF2B1937734B00D2C294 /* AppDelegate.m in Sources */,
 				22B1CF391937734B00D2C294 /* Notify.m in Sources */,
+				0170270D1DFED3DB0081835F /* AppPrefsWindowsController.m in Sources */,
 				22B1CF351937734B00D2C294 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,10 +448,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		010CE6D41E0D32D40076F60C /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010CE6D31E0D32D40076F60C /* Base */,
+				010CE6D61E0D32D60076F60C /* en */,
+				010CE6D81E0D32DB0076F60C /* zh-Hans */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
 		22B1CEF61937734B00D2C294 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				22B1CEF71937734B00D2C294 /* Base */,
+				010CE6CA1E0D2D890076F60C /* en */,
+				010CE6CE1E0D323C0076F60C /* zh-Hans */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -430,6 +472,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				22B1CEF91937734B00D2C294 /* Base */,
+				010CE6CC1E0D2E610076F60C /* en */,
+				010CE6CF1E0D323C0076F60C /* zh-Hans */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -438,6 +482,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				22B1CF241937734B00D2C294 /* en */,
+				010CE6D01E0D323C0076F60C /* zh-Hans */,
+				010CE6D91E0D45DF0076F60C /* Base */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -446,6 +492,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				22B1CF261937734B00D2C294 /* en */,
+				010CE6CD1E0D30380076F60C /* Base */,
+				010CE6D11E0D323C0076F60C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -457,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -502,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
