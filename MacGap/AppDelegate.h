@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+<<<<<<< HEAD
 
 @class WindowController;
 
@@ -15,11 +16,18 @@
 {
 
 }
+=======
+
+@class WindowController;
+
+@interface AppDelegate : NSObject <NSApplicationDelegate,NSUserNotificationCenterDelegate>
+>>>>>>> origin/master
 
 @property (retain, nonatomic) WindowController *windowController;
 
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)openIssue:(id)sender;
+
 
 
 

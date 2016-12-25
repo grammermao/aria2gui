@@ -80,6 +80,7 @@
         maxUploadSpeed = 0;
     }
     
+<<<<<<< HEAD
     if (maxPerDownloadSpeed < 0)
     {
         maxPerDownloadSpeed = 0;
@@ -114,6 +115,19 @@
         [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
+=======
+    NSString *dir = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SAVE_PATH];
+    
+    if (!dir || [dir length] == 0)
+    {
+        dir = [@"~/Downloads" stringByExpandingTildeInPath];
+    }
+    
+    NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --input-file=%@ --save-session=%@ -D",[[NSBundle mainBundle] pathForResource:@"aria2gui" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"]];
+                               
+    [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        
+>>>>>>> origin/master
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/bin/sh";
     task.arguments = @[startAriaPath];
@@ -129,6 +143,7 @@
     [task launch];
     [NSApp terminate:self];
 
+<<<<<<< HEAD
 }
 
 - (IBAction)openPreferences:(id)sender
@@ -149,5 +164,13 @@
     NSString *currentLanguage = [languages objectAtIndex:0];
     NSLog(@"%@", currentLanguage);
 }
+=======
+- (IBAction)openPreferences:(id)sender
+{
+    [[AppPrefsWindowsController sharedPrefsWindowController] showWindow:nil];
+}
+
+
+>>>>>>> origin/master
 
 @end
