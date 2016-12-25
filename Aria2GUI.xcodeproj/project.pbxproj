@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		010CE6C51E0CF6CB0076F60C /* Proxy.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6C31E0CF6CB0076F60C /* Proxy.png */; };
 		010CE6C61E0CF6CB0076F60C /* Proxy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */; };
 		010CE6D21E0D32D40076F60C /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010CE6D41E0D32D40076F60C /* Preferences.xib */; };
@@ -17,27 +16,13 @@
 		016F30341E097AA8001132DF /* restartAria2.sh in Resources */ = {isa = PBXBuildFile; fileRef = 016F30321E097AA8001132DF /* restartAria2.sh */; };
 		0170270D1DFED3DB0081835F /* AppPrefsWindowsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017027081DFED3DB0081835F /* AppPrefsWindowsController.m */; };
 		0170270E1DFED3DB0081835F /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */; };
-=======
-		017026F41DFEC7DB0081835F /* Advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = 017026EE1DFEC7DB0081835F /* Advanced.png */; };
-		017026F51DFEC7DB0081835F /* Colors.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 017026EF1DFEC7DB0081835F /* Colors.tiff */; };
-		017026F61DFEC7DB0081835F /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 017026F01DFEC7DB0081835F /* General.png */; };
-		017026F71DFEC7DB0081835F /* Playback.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 017026F11DFEC7DB0081835F /* Playback.tiff */; };
-		017026F91DFEC7DB0081835F /* Updates.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 017026F31DFEC7DB0081835F /* Updates.tiff */; };
-		0170270D1DFED3DB0081835F /* AppPrefsWindowsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017027081DFED3DB0081835F /* AppPrefsWindowsController.m */; };
-		0170270E1DFED3DB0081835F /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */; };
-		017027101DFED3DB0081835F /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170270C1DFED3DB0081835F /* Preferences.xib */; };
->>>>>>> origin/master
 		01770F461D8A6C1500841B71 /* aria2.conf in Resources */ = {isa = PBXBuildFile; fileRef = 01770F451D8A6C1500841B71 /* aria2.conf */; };
 		01B5354C1E0A1A2100C05F9A /* Bandwidth.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B535481E0A1A2100C05F9A /* Bandwidth.png */; };
 		01B5354D1E0A1A2100C05F9A /* Bandwidth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */; };
 		01B5354E1E0A1A2100C05F9A /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B5354A1E0A1A2100C05F9A /* General.png */; };
 		01B5354F1E0A1A2100C05F9A /* General@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B5354B1E0A1A2100C05F9A /* General@2x.png */; };
 		01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */ = {isa = PBXBuildFile; fileRef = 01BC003A1DDCB9D200DB1BB0 /* aria2.session */; };
-<<<<<<< HEAD
 		01CC37EB1E0428E900B34A9D /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 01CC37EA1E0428E900B34A9D /* aria2c */; };
-=======
-		01CC37EB1E0428E900B34A9D /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01CC37EA1E0428E900B34A9D /* aria2gui */; };
->>>>>>> origin/master
 		2237E64A192B0177001E1393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E649192B0177001E1393 /* Cocoa.framework */; };
 		2237E67E192B0186001E1393 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67D192B0186001E1393 /* WebKit.framework */; };
 		2237E680192B018D001E1393 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67F192B018D001E1393 /* JavaScriptCore.framework */; };
@@ -72,7 +57,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		010CE6C31E0CF6CB0076F60C /* Proxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Proxy.png; sourceTree = "<group>"; };
 		010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Proxy@2x.png"; sourceTree = "<group>"; };
 		010CE6CA1E0D2D890076F60C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -90,32 +74,17 @@
 		013C1D1A1E0EB025001EA2E5 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		016F30311E097AA8001132DF /* startAria2.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = startAria2.sh; sourceTree = "<group>"; };
 		016F30321E097AA8001132DF /* restartAria2.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = restartAria2.sh; sourceTree = "<group>"; };
-=======
-		017026EE1DFEC7DB0081835F /* Advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Advanced.png; sourceTree = "<group>"; };
-		017026EF1DFEC7DB0081835F /* Colors.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Colors.tiff; sourceTree = "<group>"; };
-		017026F01DFEC7DB0081835F /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
-		017026F11DFEC7DB0081835F /* Playback.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Playback.tiff; sourceTree = "<group>"; };
-		017026F31DFEC7DB0081835F /* Updates.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Updates.tiff; sourceTree = "<group>"; };
->>>>>>> origin/master
 		017027071DFED3DB0081835F /* AppPrefsWindowsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPrefsWindowsController.h; sourceTree = "<group>"; };
 		017027081DFED3DB0081835F /* AppPrefsWindowsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPrefsWindowsController.m; sourceTree = "<group>"; };
 		017027091DFED3DB0081835F /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		0170270C1DFED3DB0081835F /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
->>>>>>> origin/master
 		01770F451D8A6C1500841B71 /* aria2.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.conf; sourceTree = "<group>"; };
 		01B535481E0A1A2100C05F9A /* Bandwidth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bandwidth.png; sourceTree = "<group>"; };
 		01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bandwidth@2x.png"; sourceTree = "<group>"; };
 		01B5354A1E0A1A2100C05F9A /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		01B5354B1E0A1A2100C05F9A /* General@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General@2x.png"; sourceTree = "<group>"; };
 		01BC003A1DDCB9D200DB1BB0 /* aria2.session */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.session; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		01CC37EA1E0428E900B34A9D /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2c; sourceTree = "<group>"; };
-=======
-		01CC37EA1E0428E900B34A9D /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
->>>>>>> origin/master
 		2237E646192B0177001E1393 /* Aria2GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2GUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2237E649192B0177001E1393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2237E64C192B0177001E1393 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -196,20 +165,12 @@
 		017026ED1DFEC7DB0081835F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				01B535481E0A1A2100C05F9A /* Bandwidth.png */,
 				01B535491E0A1A2100C05F9A /* Bandwidth@2x.png */,
 				01B5354A1E0A1A2100C05F9A /* General.png */,
 				01B5354B1E0A1A2100C05F9A /* General@2x.png */,
 				010CE6C31E0CF6CB0076F60C /* Proxy.png */,
 				010CE6C41E0CF6CB0076F60C /* Proxy@2x.png */,
-=======
-				017026EE1DFEC7DB0081835F /* Advanced.png */,
-				017026EF1DFEC7DB0081835F /* Colors.tiff */,
-				017026F01DFEC7DB0081835F /* General.png */,
-				017026F11DFEC7DB0081835F /* Playback.tiff */,
-				017026F31DFEC7DB0081835F /* Updates.tiff */,
->>>>>>> origin/master
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,11 +182,7 @@
 				017027081DFED3DB0081835F /* AppPrefsWindowsController.m */,
 				017027091DFED3DB0081835F /* DBPrefsWindowController.h */,
 				0170270A1DFED3DB0081835F /* DBPrefsWindowController.m */,
-<<<<<<< HEAD
 				010CE6D41E0D32D40076F60C /* Preferences.xib */,
-=======
-				0170270C1DFED3DB0081835F /* Preferences.xib */,
->>>>>>> origin/master
 			);
 			name = Preferences;
 			path = MacGap/Preferences;
@@ -274,13 +231,9 @@
 		22B1CEF31937734B00D2C294 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				016F30311E097AA8001132DF /* startAria2.sh */,
 				016F30321E097AA8001132DF /* restartAria2.sh */,
 				01CC37EA1E0428E900B34A9D /* aria2c */,
-=======
-				01CC37EA1E0428E900B34A9D /* aria2gui */,
->>>>>>> origin/master
 				01BC003A1DDCB9D200DB1BB0 /* aria2.session */,
 				01770F451D8A6C1500841B71 /* aria2.conf */,
 				22B1CEF41937734B00D2C294 /* AppDelegate.h */,
@@ -435,16 +388,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-=======
-				2237E6EF192BAF85001E1393 /* public in Resources */,
-				017026F71DFEC7DB0081835F /* Playback.tiff in Resources */,
->>>>>>> origin/master
 				01BC003B1DDCB9D200DB1BB0 /* aria2.session in Resources */,
 				01B5354E1E0A1A2100C05F9A /* General.png in Resources */,
 				22B1CF401937734B00D2C294 /* Credits.rtf in Resources */,
 				22B1CF421937734B00D2C294 /* Images.xcassets in Resources */,
-<<<<<<< HEAD
 				016F30341E097AA8001132DF /* restartAria2.sh in Resources */,
 				010CE6C51E0CF6CB0076F60C /* Proxy.png in Resources */,
 				010CE6C61E0CF6CB0076F60C /* Proxy@2x.png in Resources */,
@@ -452,20 +399,9 @@
 				010CE6D21E0D32D40076F60C /* Preferences.xib in Resources */,
 				016F30331E097AA8001132DF /* startAria2.sh in Resources */,
 				01B5354F1E0A1A2100C05F9A /* General@2x.png in Resources */,
-=======
-				01CC37EB1E0428E900B34A9D /* aria2gui in Resources */,
-				017026F51DFEC7DB0081835F /* Colors.tiff in Resources */,
-				017027101DFED3DB0081835F /* Preferences.xib in Resources */,
->>>>>>> origin/master
 				22B1CF2D1937734B00D2C294 /* MainWindow.xib in Resources */,
 				01B5354C1E0A1A2100C05F9A /* Bandwidth.png in Resources */,
 				22B1CF2C1937734B00D2C294 /* MainMenu.xib in Resources */,
-<<<<<<< HEAD
-=======
-				017026F61DFEC7DB0081835F /* General.png in Resources */,
-				017026F91DFEC7DB0081835F /* Updates.tiff in Resources */,
-				017026F41DFEC7DB0081835F /* Advanced.png in Resources */,
->>>>>>> origin/master
 				01770F461D8A6C1500841B71 /* aria2.conf in Resources */,
 				011A564A1E0EBBB7005BEAA6 /* public_zh in Resources */,
 				013C1D1B1E0EB025001EA2E5 /* public in Resources */,
