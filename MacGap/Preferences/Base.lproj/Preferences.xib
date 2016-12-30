@@ -155,8 +155,8 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cB7-Mt-chM">
-                    <rect key="frame" x="131" y="174" width="172" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="cB7-Mt-chM">
+                    <rect key="frame" x="132" y="174" width="172" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Limit total task manually to:" id="Evh-K3-dsm">
                         <font key="font" metaFont="system"/>
@@ -165,7 +165,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Dq1-5g-Etq">
-                    <rect key="frame" x="131" y="149" width="172" height="17"/>
+                    <rect key="frame" x="132" y="149" width="172" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Limit per task manually to:" id="49V-Nk-TT1">
                         <font key="font" metaFont="system"/>
@@ -317,11 +317,11 @@
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="GsL-n7-hfr">
-                    <rect key="frame" x="134" y="54" width="174" height="17"/>
+                    <rect key="frame" x="132" y="53" width="174" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="[0:unlimited,  apply required]" id="BYC-hh-uOA">
                         <font key="font" size="11" name=".PingFangSC-Regular"/>
-                        <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
@@ -340,39 +340,84 @@
             <point key="canvasLocation" x="131.5" y="194.5"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="132"/>
-        <customView id="Wtr-vE-NFa">
-            <rect key="frame" x="0.0" y="0.0" width="440" height="145"/>
+        <customView misplaced="YES" id="Wtr-vE-NFa">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="251"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="Osu-CX-oLi">
-                    <rect key="frame" x="367" y="81" width="49" height="22"/>
+                    <rect key="frame" x="364" y="141" width="49" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Jb1-j1-JJb">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.UserDefaultProxyPort" id="58i-dP-ISf">
+                            <dictionary key="options">
+                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="EiG-8Y-wi8">
-                    <rect key="frame" x="82" y="80" width="243" height="22"/>
+                    <rect key="frame" x="104" y="140" width="218" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="X3e-ik-UlN">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.UserDefaultProxyHost" id="xdw-19-gsj">
+                            <dictionary key="options">
+                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
                 </textField>
-                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="HNA-4O-Rra">
-                    <rect key="frame" x="284" y="48" width="133" height="22"/>
+                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="P8U-Fa-aBw">
+                    <rect key="frame" x="104" y="78" width="109" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="plk-Ac-sZy">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Bv0-sO-o0v">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.UserDefaultProxyUser" id="lFa-0P-JxJ">
+                            <dictionary key="options">
+                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="Y3x-He-Mra">
+                    <rect key="frame" x="304" y="78" width="109" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="NeY-Vq-ORc">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.UserDefaultProxyPassword" id="yl0-gh-kc8">
+                            <dictionary key="options">
+                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="k8J-eS-M5n">
-                    <rect key="frame" x="21" y="84" width="58" height="17"/>
+                    <rect key="frame" x="23" y="144" width="72" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Address:" id="tvh-a1-S4W">
                         <font key="font" metaFont="system"/>
@@ -381,7 +426,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="5ZI-Cr-OoK">
-                    <rect key="frame" x="21" y="114" width="73" height="17"/>
+                    <rect key="frame" x="23" y="174" width="73" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Proxy type:" id="8YF-kp-EsY">
                         <font key="font" metaFont="system"/>
@@ -390,25 +435,25 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="bXQ-wO-HKS">
-                    <rect key="frame" x="206" y="51" width="66" height="17"/>
+                    <rect key="frame" x="233" y="81" width="66" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Password:" id="ZHg-JR-I0K">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Password:" id="ZHg-JR-I0K">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="XqC-P9-6TV">
-                    <rect key="frame" x="21" y="51" width="47" height="17"/>
+                    <rect key="frame" x="19" y="81" width="72" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="User:" id="4qh-6l-Ilz">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="User:" id="4qh-6l-Ilz">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="s8l-bE-EZG">
-                    <rect key="frame" x="331" y="84" width="34" height="17"/>
+                    <rect key="frame" x="328" y="144" width="34" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="port:" id="0vC-Jm-qNO">
                         <font key="font" metaFont="system"/>
@@ -417,7 +462,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" misplaced="YES" id="SEp-UN-sKm">
-                    <rect key="frame" x="351" y="5" width="75" height="32"/>
+                    <rect key="frame" x="351" y="13" width="75" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Apply" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IAn-44-S1A">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -427,32 +472,62 @@
                         <action selector="restartAria2:" target="-2" id="nkk-qX-lVF"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="P8U-Fa-aBw">
-                    <rect key="frame" x="82" y="48" width="96" height="22"/>
+                <button misplaced="YES" id="3I4-Gg-YMm">
+                    <rect key="frame" x="18" y="204" width="133" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Bv0-sO-o0v">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <buttonCell key="cell" type="check" title="Use proxy setting" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="8Pk-FU-6Xp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.UserDefaultProxyState" id="zl8-rj-qYs"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="fAa-Qd-1rQ">
+                    <rect key="frame" x="102" y="49" width="247" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="[defult not use proxy setting,  apply required]" id="vxM-KU-lO8">
+                        <font key="font" size="11" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <popUpButton verticalHuggingPriority="750" misplaced="YES" id="YdQ-8P-zlc">
-                    <rect key="frame" x="105" y="108" width="100" height="26"/>
+                <popUpButton verticalHuggingPriority="750" misplaced="YES" id="9fy-bc-Lht" userLabel="setproxy">
+                    <rect key="frame" x="102" y="168" width="114" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="http" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="M1L-gU-adn" id="sEZ-vX-Ng0">
+                    <popUpButtonCell key="cell" type="push" title="all" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kiY-EY-8wZ" id="Ogm-qf-DsH">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
-                        <menu key="menu" id="ank-oS-QhK">
+                        <menu key="menu" id="Rb2-gz-cZO">
                             <items>
-                                <menuItem title="http" state="on" id="M1L-gU-adn"/>
-                                <menuItem title="https" id="QKk-ut-XO2"/>
-                                <menuItem title="ftp" id="NsY-mH-jgU"/>
+                                <menuItem title="all" state="on" id="kiY-EY-8wZ"/>
+                                <menuItem title="http" id="QEG-R6-03X"/>
+                                <menuItem title="https" id="oDS-9K-aLC"/>
+                                <menuItem title="ftp" id="V7S-nN-ddG"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
+                    <connections>
+                        <action selector="update:" target="-2" id="K01-ow-Q6b"/>
+                        <binding destination="132" name="selectedIndex" keyPath="values.Aria2GUI_PROXY_TYPE" id="G7j-9r-ITQ"/>
+                    </connections>
                 </popUpButton>
+                <button misplaced="YES" id="OT2-50-Vff">
+                    <rect key="frame" x="23" y="107" width="133" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Verify user" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="k0L-JY-Tq5">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <connections>
+                            <binding destination="132" name="value" keyPath="values.UserDefaultUserState" id="CXi-Rl-laF"/>
+                        </connections>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="132" name="value" keyPath="values.Aria2GUI_USER_STATE" id="ZPY-op-XsB"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="607" y="141.5"/>
+            <point key="canvasLocation" x="607" y="194.5"/>
         </customView>
     </objects>
 </document>

@@ -454,7 +454,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
                 MacGap.notify({
                               // type: 'sheet',
                               title: e.title,
-                              content: 'Aria2 Task Finished',
+                              content: 'Aria2任务完成',
                               });
               }
               finished_tasks_list.push(e.gid);

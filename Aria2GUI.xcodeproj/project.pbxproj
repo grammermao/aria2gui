@@ -84,6 +84,11 @@
 		01B5354A1E0A1A2100C05F9A /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		01B5354B1E0A1A2100C05F9A /* General@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General@2x.png"; sourceTree = "<group>"; };
 		01BC003A1DDCB9D200DB1BB0 /* aria2.session */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aria2.session; sourceTree = "<group>"; };
+		01CAFC021E1645E300506429 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Preferences.strings; sourceTree = "<group>"; };
+		01CAFC031E1645E300506429 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		01CAFC041E1645E300506429 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainWindow.strings; sourceTree = "<group>"; };
+		01CAFC051E1645E300506429 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ja; path = ja.lproj/Credits.rtf; sourceTree = "<group>"; };
+		01CAFC061E1645E300506429 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01CC37EA1E0428E900B34A9D /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2c; sourceTree = "<group>"; };
 		2237E646192B0177001E1393 /* Aria2GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aria2GUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2237E649192B0177001E1393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -372,6 +377,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				ja,
 			);
 			mainGroup = 2237E63D192B0177001E1393;
 			productRefGroup = 2237E647192B0177001E1393 /* Products */;
@@ -454,6 +460,7 @@
 				010CE6D31E0D32D40076F60C /* Base */,
 				010CE6D61E0D32D60076F60C /* en */,
 				010CE6D81E0D32DB0076F60C /* zh-Hans */,
+				01CAFC021E1645E300506429 /* ja */,
 			);
 			name = Preferences.xib;
 			sourceTree = "<group>";
@@ -464,6 +471,7 @@
 				22B1CEF71937734B00D2C294 /* Base */,
 				010CE6CA1E0D2D890076F60C /* en */,
 				010CE6CE1E0D323C0076F60C /* zh-Hans */,
+				01CAFC031E1645E300506429 /* ja */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 				22B1CEF91937734B00D2C294 /* Base */,
 				010CE6CC1E0D2E610076F60C /* en */,
 				010CE6CF1E0D323C0076F60C /* zh-Hans */,
+				01CAFC041E1645E300506429 /* ja */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -484,6 +493,7 @@
 				22B1CF241937734B00D2C294 /* en */,
 				010CE6D01E0D323C0076F60C /* zh-Hans */,
 				010CE6D91E0D45DF0076F60C /* Base */,
+				01CAFC051E1645E300506429 /* ja */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -494,6 +504,7 @@
 				22B1CF261937734B00D2C294 /* en */,
 				010CE6CD1E0D30380076F60C /* Base */,
 				010CE6D11E0D323C0076F60C /* zh-Hans */,
+				01CAFC061E1645E300506429 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

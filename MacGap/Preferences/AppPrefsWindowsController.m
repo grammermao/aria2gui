@@ -6,11 +6,10 @@
 -(void)setupToolbar {
     [self addView:generalPreferenceView label:NSLocalizedStringFromTable(@"General1",@"Preferences",nil) image:[NSImage imageNamed:@"General"]];
     [self addView:bandwidthPreferenceView label:NSLocalizedStringFromTable(@"Bandwidth1",@"Preferences",nil) image:[NSImage imageNamed:@"Bandwidth"]];
-    //[self addView:proxyPreferenceView label:NSLocalizedStringFromTable(@"proxy1",@"Preferences",nil) image:[NSImage imageNamed:@"Proxy"]];
+    [self addView:proxyPreferenceView label:NSLocalizedStringFromTable(@"proxy1",@"Preferences",nil) image:[NSImage imageNamed:@"Proxy"]];
     
     [self setCrossFade:YES];
 	[self setShiftSlowsAnimation:YES];
-    
     [[NSColorPanel sharedColorPanel] setShowsAlpha:YES];
     [NSColor setIgnoresAlpha:NO];
 }
@@ -78,6 +77,11 @@
     [self relaunchAfterDelay:1.0];
 }
 
-
+- (IBAction)update:(id)sender {
+    NSPopUpButton *popupButton = (NSPopUpButton *)sender;
+    NSString *label = [popupButton titleOfSelectedItem];
+    [[NSUserDefaults standardUserDefaults] setObject:label forKey:Aria2GUI_PROXY_TYPE];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 @end
