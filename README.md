@@ -33,6 +33,7 @@ Aria2GUI
 - [Aria2](https://aria2.github.io)
 - [YAAW](https://github.com/binux/yaaw)
 - [MacGap](https://github.com/MacGapProject)
+- [fakeThunder](https://github.com/MartianZ/fakeThunder)
 
 ## Contributors:  
 
