@@ -22,7 +22,7 @@ Aria2GUI
 
 - 使用Chrome浏览器可配合[YAAW-for-Chrome](https://github.com/acgotaku/YAAW-for-Chrome)插件接管浏览器的所有下载到aria2
 - 导出插件：[百度网盘](https://github.com/acgotaku/BaiduExporter)，[115网盘](https://github.com/acgotaku/115)，[迅雷离线](https://github.com/binux/ThunderLixianExporter)
-- 网盘插件里面的User-Agent优先级高于客户端，所以修改客户端里面User-Agent不会影响导出下载的速度，默认伪装成Transmission/2.77主要是为了下BT/PT
+- 网盘插件里面的User-Agent优先级高于客户端，所以修改客户端里面User-Agent不会影响导出下载的速度，默认伪装成Transmission/2.77是为了支持BT/PT
 - 速度不理想可以尝试下这个User-Agent(netdisk;2.0.0;pc;pc-mac;10.12;macbaiduyunguanjia)，百度网盘导出插件里面替换原来的User-Agent
 
 ## Download:
