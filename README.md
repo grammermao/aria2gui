@@ -26,7 +26,7 @@ Aria2GUI
 - 速度不理想可以尝试下这个User-Agent(netdisk;2.0.0;pc;pc-mac;10.12;macbaiduyunguanjia)，百度网盘导出插件里面替换原来的User-Agent
 
 ## UI
-- WebUI使用的[YAAW](https://github.com/binux/yaaw)，aria2的webui有好几个版本，你也可以自行替换，web文件都在public文件夹内，我不会维护其他webui的版本，也许未来也会出原生UI的版本，替换掉yaaw以及api写得很烂的macgap，当然也有可能不会出。
+- WebUI使用的[YAAW](https://github.com/binux/yaaw)，aria2的WebUI有好几个版本，你也可以自行替换，web文件都在public文件夹内，我不会维护其他WebUI的版本，也许未来也会出原生UI的版本，替换掉yaaw以及api写得很烂的macgap，当然也有可能不会出。
 
 ## Download:
 
