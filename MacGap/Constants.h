@@ -29,7 +29,7 @@
 #define Aria2GUI_PROXY_TYPE @"UserDefaultProxyType"
 #define Aria2GUI_DISK_CACHE @"UserDefaultDiskCache"
 #define Aria2GUI_MAX_CONNECTION_PER_SERVER @"UserDefaultMaxConnectionPerServer"
-#define Aria2GIU_MIN_SPLIT_SIZE @"UserDefaultMinSplitSize"
+#define Aria2GUI_MIN_SPLIT_SIZE @"UserDefaultMinSplitSize"
 #define Aria2GUI_SPLIT @"UserDefaultSplit"
 #define Aria2GUI_ALLOW_OVERWRITE_STATE @"UserDefaultAllowOverwriteState"
 #define Aria2GUI_AUTO_FILE_RENAMEING_STATE @"UserDefaultAutoFileRenamingState"
