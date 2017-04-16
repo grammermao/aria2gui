@@ -9,10 +9,32 @@
 #import "AppDelegate.h"
 #import "WindowController.h"
 #import "AppPrefsWindowsController.h"
+#import "SBPopViewCotroller.h"
 
 
 @implementation AppDelegate
 
++ (void)initialize {
+    if ( self == [AppDelegate class] ) {
+        NSDictionary *defaultValues = @{Aria2GUI_MAX_CONCURRENT_DOWNLOADS: @(10),
+                                        Aria2GUI_MAX_DOWNLOAD_SPEED:@(0),
+                                        Aria2GUI_MAX_UPLOAD_SPEED:@(0),
+                                        Aria2GUI_MAX_PER_DOWNLOAD_SPEED:@(0),
+                                        Aria2GUI_MAX_PER_UPLOAD_SPEED:@(0),
+                                        Aria2GUI_PROXY_STATE:@(NO),
+                                        Aria2GUI_USER_STATE:@(NO),
+                                        Aria2GUI_DISK_CACHE:@(0),
+                                        Aria2GUI_MAX_CONNECTION_PER_SERVER:@(20),
+                                        Aria2GIU_MIN_SPLIT_SIZE:@(10),
+                                        Aria2GUI_SPLIT:@(20),
+                                        Aria2GUI_ALLOW_OVERWRITE_STATE:@("true"),
+                                        Aria2GUI_AUTO_FILE_RENAMEING_STATE:@("true"),
+                                        Aria2GUI_CONTIUNE:@("true"),
+                                        };
+        [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+        [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaultValues];
+    }
+}
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
     [self startAria2];
@@ -27,18 +49,25 @@
 }
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSArray *languages = [NSLocale preferredLanguages];
-    NSString *currentLanguage = [languages objectAtIndex:0];
-    if([currentLanguage  isEqual: @"zh-Hans-CN"])
-    {
-        self.windowController = [[WindowController alloc] initWithURL: kStartPage_ZH];
-    }
-    else
-        self.windowController = [[WindowController alloc] initWithURL: kStartPage];
     
+    bool statusBarState = [[NSUserDefaults standardUserDefaults] boolForKey:Aria2GUI_STATUS_BAR_STATE];
+    if(!statusBarState)
+    {
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        if([currentLanguage  isEqual: @"zh-Hans-CN"])
+        {
+            self.windowController = [[WindowController alloc] initWithURL: kStartPage_ZH];
+        }
+        else
+            self.windowController = [[WindowController alloc] initWithURL: kStartPage];
     [self.windowController setWindowParams];
     [self.windowController showWindow:self];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    }
+    else
+    [self showStatusBar];
+
 
 }
 
@@ -55,7 +84,6 @@
 
 -(void)startAria2
 {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *startAriaPath = [[NSBundle mainBundle] pathForResource:@"startAria2" ofType:@"sh"];
     NSString *dir = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SAVE_PATH];
     NSInteger maxConcurrentDownloads = [[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS];
@@ -121,21 +149,21 @@
 
     if (proxyState == YES && userState == YES)
     {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ --%@-proxy='http://%@:%@@%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,proxyType,proxyUser,proxyPassword,proxyHost,(long)proxyPort];
+        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ --%@-proxy='http://%@:%@@%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,proxyType,proxyUser,proxyPassword,proxyHost,(long)proxyPort];
         [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
     else
         if(proxyState == YES && userState == NO)
     {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ --%@-proxy='http://%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,proxyType,proxyHost,(long)proxyPort];
+        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ --%@-proxy='http://%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,proxyType,proxyHost,(long)proxyPort];
         [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
     else
         if ((proxyState == NO && userState == NO) || (proxyState == NO && userState == YES))
     {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr];
+        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%li --max-overall-download-limit=%@ --max-overall-upload-limit=%@ --max-download-limit=%@ --max-upload-limit=%@ -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],(long)maxConcurrentDownloads,maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr];
         [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     NSTask *task = [[NSTask alloc] init];
@@ -153,6 +181,39 @@
     [task launch];
     [NSApp terminate:self];
 
+}
+-(void)showStatusBar
+{
+    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    NSImage *image = [NSImage imageNamed:@"aria2"];
+    [self.statusItem.button setImage:image];
+    
+    _popOver = [[NSPopover alloc] init];
+    _popOver.behavior = NSPopoverBehaviorTransient;
+    _popOver.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
+    _popOver.contentViewController = [[SBPopViewCotroller alloc] initWithNibName:@"SBPopViewCotroller" bundle:nil];
+    
+    
+    self.statusItem.target = self ;
+    self.statusItem.button.action =@selector(showMyPopover:);
+    
+    
+    
+    __weak typeof(self) weakSelf = self;
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask handler:^(NSEvent *event)
+     {
+         if(weakSelf.popOver.isShown)
+         {
+             [weakSelf.popOver close];
+         }
+     }];
+}
+
+-(void)showMyPopover:(NSStatusBarButton *)button
+{
+    [_popOver showRelativeToRect:button.bounds ofView:button preferredEdge:NSRectEdgeMaxY];
 }
 
 - (IBAction)openPreferences:(id)sender
