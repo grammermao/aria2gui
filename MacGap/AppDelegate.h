@@ -20,11 +20,5 @@
 @property (nonatomic,strong) NSStatusItem *statusItem;
 @property (nonatomic,strong) NSPopover *popOver;
 
-- (IBAction)openPreferences:(id)sender;
-- (IBAction)openIssue:(id)sender;
-
-
-
-
 
 @end

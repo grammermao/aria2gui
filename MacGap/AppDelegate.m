@@ -90,36 +90,47 @@
     NSInteger proxyPort = [[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_PROXY_PORT];
     NSString *proxyUser = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_PROXY_USER];
     NSString *proxyPassword = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_PROXY_PASSWORD];
+    NSString *proxyType = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_PROXY_TYPE];
+
     bool proxyState = [[NSUserDefaults standardUserDefaults] boolForKey:Aria2GUI_PROXY_STATE];
     bool userState = [[NSUserDefaults standardUserDefaults] boolForKey:Aria2GUI_USER_STATE];
-    NSString *proxyType = [[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_PROXY_TYPE];
     
     
     if (!dir || [dir length] == 0)
     {
         dir = [@"~/Downloads" stringByExpandingTildeInPath];
     }
+    
+    NSString *maxDownloadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_DOWNLOAD_SPEED]];
+    NSString *maxUploadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_UPLOAD_SPEED]];
+    NSString *maxPerDownloadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_PER_DOWNLOAD_SPEED]];
+    NSString *maxPerUploadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_PER_UPLOAD_SPEED]];
+    
+    NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M -D ",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE]];
+    [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:startAriaPath];
+    
+    [fileHandle seekToEndOfFile];
 
     if (proxyState == YES && userState == YES)
     {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M --%@-proxy='http://%@:%@@%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE],proxyType,proxyUser,proxyPassword,proxyHost,(long)proxyPort];
-        [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        NSString *shCommand = [NSString stringWithFormat:@"--%@-proxy='http://%@:%@@%@:%ld'",proxyType,proxyUser,proxyPassword,proxyHost,(long)proxyPort];
+        NSData* stringData  = [shCommand dataUsingEncoding:NSUTF8StringEncoding];
+        [fileHandle writeData:stringData];
+        [fileHandle closeFile];
     }
     
     else
         if(proxyState == YES && userState == NO)
     {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M --%@-proxy='http://%@:%ld' -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE],proxyType,proxyHost,(long)proxyPort];
-        [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        NSString *shCommand = [NSString stringWithFormat:@"--%@-proxy='http://%@:%ld'",proxyType,proxyHost,(long)proxyPort];
+        NSData* stringData  = [shCommand dataUsingEncoding:NSUTF8StringEncoding];
+        [fileHandle writeData:stringData];
+        [fileHandle closeFile];
     }
     
-    else
-        if ((proxyState == NO && userState == NO) || (proxyState == NO && userState == YES))
-    {
-        NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M -D",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_DOWNLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_PER_UPLOAD_SPEED],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE]];
-        [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    }
+
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = @"/bin/sh";
     task.arguments = @[startAriaPath];
@@ -178,6 +189,12 @@
 - (IBAction)openIssue:(id)sender
 {
     NSURL *url = [NSURL URLWithString:@"https://github.com/yangshun1029/aria2gui/issues"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+-(IBAction)checkForUpdate:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"https://github.com/yangshun1029/aria2gui/releases"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 

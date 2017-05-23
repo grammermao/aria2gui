@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -324,7 +324,7 @@
                 <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="Xpj-Xp-gaw">
                     <rect key="frame" x="373" y="250" width="19" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="30" doubleValue="3" id="61D-Oz-1A2"/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="40" doubleValue="3" id="61D-Oz-1A2"/>
                     <connections>
                         <binding destination="132" name="value" keyPath="values.UserDefaultMaxConnectionPerServer" id="b6h-56-ODQ"/>
                     </connections>
