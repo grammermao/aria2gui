@@ -12,13 +12,16 @@ PODS:
   - AFNetworking/Reachability (3.1.0)
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
+  - Sparkle (1.17.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1)
+  - Sparkle
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
 
-PODFILE CHECKSUM: 78c5d16ec15d33fe80d6beb40bf35e48f7e61c16
+PODFILE CHECKSUM: ee48ff5a588f763a2f270b162c91287094020414
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

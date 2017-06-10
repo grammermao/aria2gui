@@ -114,7 +114,7 @@
 "ZHg-JR-I0K.title" = "密码:";
 
 /* Class = "NSTextFieldCell"; title = "Check file:"; ObjectID = "ZrV-al-Lzx"; */
-"ZrV-al-Lzx.title" = "查看文件:";
+"ZrV-al-Lzx.title" = "日志:";
 
 /* Class = "NSTextFieldCell"; placeholderString = "0"; ObjectID = "bCu-Nv-jKL"; */
 "bCu-Nv-jKL.placeholderString" = "0";

@@ -30,6 +30,7 @@
                                         Aria2GUI_ALLOW_OVERWRITE_STATE:@("true"),
                                         Aria2GUI_AUTO_FILE_RENAMEING_STATE:@("true"),
                                         Aria2GUI_CONTIUNE:@("true"),
+                                        Aria2GUI_LOG_FILE_STATE:@(NO),
                                         };
         [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
         [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaultValues];
@@ -106,7 +107,7 @@
     NSString *maxPerDownloadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_PER_DOWNLOAD_SPEED]];
     NSString *maxPerUploadSpeedStr = [NSString stringWithFormat:@"%ldk",[[NSUserDefaults standardUserDefaults] integerForKey:Aria2GUI_MAX_PER_UPLOAD_SPEED]];
     
-    NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@ --log=%@ --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M -D ",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE]];
+    NSString *shCommand = [NSString stringWithFormat:@"%@ --dir=%@ --conf-path=%@  --input-file=%@ --save-session=%@  --max-concurrent-downloads=%@ --max-connection-per-server=%@ --min-split-size=%@M --split=%@  --max-overall-download-limit=%@M --max-overall-upload-limit=%@K --max-download-limit=%@M --max-upload-limit=%@K --continue=%@ --auto-file-renaming=%@ --allow-overwrite=%@ --disk-cache=%@M -D ",[[NSBundle mainBundle] pathForResource:@"aria2c" ofType:nil],dir,[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"conf"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"session"],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONCURRENT_DOWNLOADS],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MAX_CONNECTION_PER_SERVER],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_MIN_SPLIT_SIZE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_SPLIT],maxDownloadSpeedStr,maxUploadSpeedStr,maxPerDownloadSpeedStr,maxPerUploadSpeedStr,[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_CONTIUNE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_AUTO_FILE_RENAMEING_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_ALLOW_OVERWRITE_STATE],[[NSUserDefaults standardUserDefaults] objectForKey:Aria2GUI_DISK_CACHE]];
     [shCommand writeToFile:startAriaPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
     NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:startAriaPath];
@@ -128,6 +129,16 @@
         NSData* stringData  = [shCommand dataUsingEncoding:NSUTF8StringEncoding];
         [fileHandle writeData:stringData];
         [fileHandle closeFile];
+    }
+    
+    else
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:Aria2GUI_LOG_FILE_STATE] == YES)
+    {
+        NSString *shCommand = [NSString stringWithFormat:@"--log=%@",[[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"]];
+        NSData* stringData  = [shCommand dataUsingEncoding:NSUTF8StringEncoding];
+        [fileHandle writeData:stringData];
+        [fileHandle closeFile];
+        
     }
     
 

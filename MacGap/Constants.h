@@ -36,3 +36,4 @@
 #define Aria2GUI_SAVE_SESSION_INTERVAL @"UserDefaultSaveSessionInterval"
 #define Aria2GUI_CONTIUNE @"UserDefaultContinue"
 #define Aria2GUI_STATUS_BAR_STATE @"UserDefaultMenubarState"
+#define Aria2GUI_LOG_FILE_STATE @"UserDefaultLogFileState"

@@ -56,21 +56,19 @@
     }
 }
 
-- (IBAction)editAria2GUILog:(id)sender
+- (IBAction)logFileState:(NSButton *)sender
 {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"aria2" ofType:@"log"];
-    if ([fileManager fileExistsAtPath:path])
-    {
-        [[NSWorkspace sharedWorkspace] openFile:path withApplication:@"TextEdit"];
-    }
-    else
-    {
-        NSAlert *alertDefult = [[NSAlert alloc]init];
-        [alertDefult setMessageText:@"miss the conf file"];
-        [alertDefult setInformativeText:@"miss the conf file"];
-        [alertDefult addButtonWithTitle:@"ok!"];
-    }
+     if (sender.state == NSOffState)
+     {
+         [[NSUserDefaults standardUserDefaults] setBool:NO  forKey:Aria2GUI_LOG_FILE_STATE];
+         [[NSUserDefaults standardUserDefaults] synchronize];
+         
+     }
+     else
+         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:Aria2GUI_LOG_FILE_STATE];
+         [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
 }
 
 - (void)relaunchAfterDelay:(float)seconds

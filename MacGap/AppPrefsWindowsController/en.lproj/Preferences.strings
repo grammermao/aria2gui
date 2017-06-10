@@ -114,7 +114,7 @@
 "ZHg-JR-I0K.title" = "Password:";
 
 /* Class = "NSTextFieldCell"; title = "Check file:"; ObjectID = "ZrV-al-Lzx"; */
-"ZrV-al-Lzx.title" = "Check file:";
+"ZrV-al-Lzx.title" = "Log:";
 
 /* Class = "NSTextFieldCell"; placeholderString = "0"; ObjectID = "bCu-Nv-jKL"; */
 "bCu-Nv-jKL.placeholderString" = "0";
